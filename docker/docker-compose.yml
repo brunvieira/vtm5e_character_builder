@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  node-app:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    command: tail -f /dev/null
+    ports:
+      - "3000:3000"
+      - "6006:6006"
+    volumes:
+      - ..:/app
